@@ -253,7 +253,7 @@ void cadastrar_paciente(Sistema *sistema) {
         data_nasc[strcspn(data_nasc, "\n")] = 0;
 
         if (!validar_data(data_nasc)) {
-            printf("ERRO: Data de nascimento invalida. Use o formato DDMMAAAA (ex: 01012000)\n");
+            printf("ERRO: Data de nascimento invalida. Use o formato DDMMAAAA\n");
             continue;
         }
         idade = calcular_idade(data_nasc);
@@ -270,7 +270,7 @@ void cadastrar_paciente(Sistema *sistema) {
     sistema->pacientes[sistema->total_pacientes].idade = idade;
 
     sistema->total_pacientes++;
-    printf("\nPaciente '%s' cadastrado com sucesso!\n", nome);
+    printf("\nPaciente cadastrado com sucesso!\n");
 }
 
 void excluir_paciente(Sistema *sistema) {
@@ -314,12 +314,12 @@ void excluir_paciente(Sistema *sistema) {
 
     sistema->pacientes[paciente_encontrado_idx] = sistema->pacientes[sistema->total_pacientes - 1];
     sistema->total_pacientes--;
-    printf("\nPaciente com CPF '%s' e todos os seus agendamentos foram excluidos com sucesso\n", cpf);
+    printf("\nPaciente foi excluidos com sucesso\n");
 }
 
 void agendar_consulta(Sistema *sistema) {
     if (sistema->total_agendamentos >= Agendamentos_maximos) {
-        printf("\nERRO: Capacidade maxima de agendamentos atingida. Nao sera possivel agendar mais consultas\n");
+        printf("\nERRO: Capacidade maxima de agendamentos atingida\n");
         return;
     }
 
@@ -356,7 +356,7 @@ void agendar_consulta(Sistema *sistema) {
         data_consulta[strcspn(data_consulta, "\n")] = 0;
 
         if (!validar_data(data_consulta)) {
-            printf("ERRO: Data invalida. Use o formato DDMMAAAA (ex: 01012025)\n");
+            printf("ERRO: Data invalida. Use o formato DDMMAAAA\n");
             continue;
         }
         if (comparar_datas(data_consulta, data_atual) < 0) {
@@ -376,7 +376,7 @@ void agendar_consulta(Sistema *sistema) {
         limpar_buffer();
 
         if (!validar_horario(hora_inicio)) {
-            printf("ERRO: Horario inicial invalido. Formato esperado HHMM (0000 a 2359)\n");
+            printf("ERRO: Horario inicial invalido. Formato esperado HHMM\n");
             continue;
         }
         if (!minutos_validos(hora_inicio)) {
@@ -384,11 +384,11 @@ void agendar_consulta(Sistema *sistema) {
             continue;
         }
         if (comparar_datas(data_consulta, data_atual) == 0 && hora_inicio <= hora_atual) {
-            printf("ERRO: Para consultas hoje, a hora inicial deve ser futura em relacao a hora atual\n");
+            printf("ERRO: Para consultas a hora inicial deve ser futura a hora atual\n");
             continue;
         }
         if (hora_inicio < 800 || hora_inicio >= 1900) {
-            printf("ERRO: Hora inicial fora do horario de funcionamento do consultorio (08:00 as 19:00)\n");
+            printf("ERRO: Hora inicial fora do horario de funcionamento do consultorio\n");
             continue;
         }
         break;
@@ -404,7 +404,7 @@ void agendar_consulta(Sistema *sistema) {
         limpar_buffer();
 
         if (!validar_horario(hora_fim)) {
-            printf("ERRO: Horario final invalido. Formato esperado HHMM (0000 a 2359)\n");
+            printf("ERRO: Horario final invalido. Formato esperado HHMM\n");
             continue;
         }
         if (!minutos_validos(hora_fim)) {
@@ -416,7 +416,7 @@ void agendar_consulta(Sistema *sistema) {
             continue;
         }
         if (hora_fim > 1900) {
-            printf("ERRO: Hora final fora do horario de funcionamento do consultorio (maximo 19:00)\n");
+            printf("ERRO: Hora final fora do horario de funcionamento do consultorio\n");
             continue;
         }
         break;
@@ -715,7 +715,7 @@ void menu_agenda(Sistema *sistema) {
         printf("Escolha uma opcao: ");
 
         if (scanf("%d", &opcao) != 1) {
-            printf("ERRO: Entrada invalida. Por favor, digite um numero\n");
+            printf("ERRO: Entrada invalida. Digite um numero\n");
             limpar_buffer();
             opcao = -1;
             continue;
@@ -735,7 +735,7 @@ void menu_agenda(Sistema *sistema) {
             case 4:
                 break;
             default:
-                printf("\nOpcao invalida! Por favor, escolha uma opcao entre 1 e 4\n");
+                printf("\nOpcao invalida! Escolha uma opcao entre 1 e 4\n");
         }
     } while (opcao != 4);
 }
@@ -753,7 +753,7 @@ int main() {
         printf("Escolha uma opcao: ");
 
         if (scanf("%d", &opcao_principal) != 1) {
-            printf("ERRO: Entrada invalida. Por favor, digite um numero\n");
+            printf("ERRO: Entrada invalida. Digite um numero\n");
             limpar_buffer();
             opcao_principal = -1;
             continue;
@@ -770,7 +770,7 @@ int main() {
             case 3:
                 break;
             default:
-                printf("\nOpcao invalida! Por favor, escolha uma opcao entre 1 e 3\n");
+                printf("\nOpcao invalida! Escolha uma opcao entre 1 e 3\n");
         }
         if (opcao_principal != 3) { 
         }
