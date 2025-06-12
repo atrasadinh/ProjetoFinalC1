@@ -1,5 +1,7 @@
 # Sistema de Gerenciamento de Pacientes e Agendamentos
 
+(Vou buscar simplificar mais a leitura do codigo para melhor entendimento e implementar comentarios para explicar o que cada parte do codigo faz exatamente)
+
 Este é um sistema simples de gerenciamento de pacientes e agendamentos desenvolvido em **C/C++**.  
 Ele permite o **cadastro**, **exclusão** e **listagem de pacientes**, além do **agendamento** e **cancelamento de consultas**, com validações básicas de dados.
 
@@ -39,3 +41,4 @@ Ele permite o **cadastro**, **exclusão** e **listagem de pacientes**, além do 
 ### 📖 Listagem da Agenda
 - Lista todos os agendamentos ou filtra por um **período específico**.
 - Resultados ordenados por **data e hora**.
+
