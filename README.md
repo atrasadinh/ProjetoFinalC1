@@ -39,11 +39,3 @@ Ele permite o **cadastro**, **exclusão** e **listagem de pacientes**, além do 
 ### 📖 Listagem da Agenda
 - Lista todos os agendamentos ou filtra por um **período específico**.
 - Resultados ordenados por **data e hora**.
-
-## 🚀 Como Executar
-
-1. Compile o projeto com um compilador C/C++ (ex: `gcc` ou `g++`).
-2. Execute o binário gerado:
-   ```bash
-   gcc main.c -o sistema
-   ./sistema
