@@ -1,12 +1,4 @@
-# ProjetoFinalC1
-
-Sistema de Gerenciamento de Pacientes e Agendamentos
-
-README para o Sistema de Gerenciamento de Pacientes e Agendamentos
-Este é um sistema simples de gerenciamento de pacientes e agendamentos desenvolvido em C. Ele permite o cadastro, exclusão e listagem de pacientes, além do agendamento e cancelamento de consultas, com validações básicas de dados.
-
-README para o Sistema de Gerenciamento de Pacientes e Agendamentos
-Este é um sistema simples de gerenciamento de pacientes e agendamentos desenvolvido em C. Ele permite o cadastro, exclusão e listagem de pacientes, além do agendamento e cancelamento de consultas, com validações básicas de dados.
+Este é um sistema simples de gerenciamento de pacientes e agendamentos desenvolvido em C/C++. Ele permite o cadastro, exclusão e listagem de pacientes, além do agendamento e cancelamento de consultas, com validações básicas de dados
 
 Funcionalidades
 Cadastro de Pacientes:
